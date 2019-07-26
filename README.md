@@ -14,3 +14,5 @@ I converted all node modules to work on the browser using browserify
 Execute server on localhost: **hosthttp-server**
 
 **Check out your console for results**
+
+Bye
