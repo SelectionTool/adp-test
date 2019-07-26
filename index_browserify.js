@@ -8988,7 +8988,7 @@ var Adp_test = Class.extend({
 		}
 		//----------------------------
 		if (!unit_test) {
-			console.log("Number of request left: "+this.number_of_request_total - this.number_of_request_made);
+			console.log("Number of request left: "+(this.number_of_request_total - this.number_of_request_made));
 			if (this.number_of_request_made < this.number_of_request_total) {
 				this.number_of_request_made++;
 				this.execute();
