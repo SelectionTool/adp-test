@@ -32,6 +32,8 @@ var Adp_test = Class.extend({
 	unit_test:false,
 	url_get:'https://interview.adpeai.com/api/v1/get-task',
 	url_post:'https://interview.adpeai.com/api/v1/submit-task',
+	number_of_request_total:15, 
+	number_of_request_made:0, 
 	////////////////////////////////////////////////////////
 	/////////////////////////////////////////////////////////
 	//constructor
@@ -125,7 +127,7 @@ var Adp_test = Class.extend({
 		}
 		//----------------------------
 		if (!unit_test) {
-			this.execute();
+			if (this.number_of_request_made < this.number_of_request_total) this.execute();
 		} else {
 			this.end = Date.now();
 			console.log("Script took " + ((this.end - this.start) / 1000)+" seconds to complete");

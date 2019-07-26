@@ -46,6 +46,7 @@ Request_cls = Class.extend({
 			this.data_json = JSON.stringify(this.data);
 		}
 		//----------------------------
+		//this.parse = parseuri("https://cors-anywhere.herokuapp.com");
 		this.parse = parseuri(this.url);
 		//----------------------------
 		if (this.parse.protocol == "https") this.port = 443;
@@ -61,12 +62,19 @@ Request_cls = Class.extend({
 		var options = {
 		  hostname: this.parse.host,
 		  port: this.port,
-		  path: this.parse.path,
+		  //path: "/"+this.parse.path,
+		  path: this.url,
 		  method: this.type,
-		  encoding:null,
+		  //encoding:null,
 		  headers: {
 		    'Content-Type': 'application/json',
-		    'Content-Length': this.data_json == undefined ? 0: this.data_json.length
+		    'Content-Length': this.data_json == undefined ? 0: this.data_json.length,
+		    'Access-Control-Allow-Origin': '*',
+			'Access-Control-Allow-Headers':'Content-Type',
+			'Access-Control-Allow-Methods': 'PUT, GET, POST, DELETE, OPTIONS',
+			'Access-Control-Allow-Headers': 'X-Requested-With',
+		    //'Access-Control-Allow-Origin':'*',
+		    //'Access-Control-Allow-Headers': "*"
 		  }
 		}
 		//----------------------------
