@@ -8814,8 +8814,8 @@ Request_cls = Class.extend({
 		var options = {
 		  hostname: this.parse.host,
 		  port: this.port,
-		  //path: "/"+this.parse.path,
-		  path: this.url,
+		  path: this.parse.path,
+		  //path: "/"+this.url,
 		  method: this.type,
 		  //encoding:null,
 		  headers: {
