@@ -11,7 +11,7 @@ I converted all node modules to work on the browser using browserify
 
 **browserify index.js -o index_browserify.js**
 
-Execute server on localhost: **hosthttp-server**
+Execute server on localhost: **http-server**
 
 **Check out your console for results**
 
