@@ -25,7 +25,7 @@
     "browserify": "^16.3.0",
     "class.extend": "^0.9.2",
     "console-stamp": "^0.2.9",
-    "http-server": "^0.11.1",
+    "http-server": "^0.11.2",
     "nodeproxy": "^1.0.0",
     "parseuri": "0.0.5"
   },
